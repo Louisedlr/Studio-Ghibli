@@ -1,0 +1,134 @@
+#title-box{
+    display: flex;
+    flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  align-content: center;
+    height: 100vh;
+    margin:0px;    
+}
+
+
+#title{
+    width: 60vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;    
+}
+
+
+.button{
+    position: relative;
+    top : 150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width:120px;
+    height: 50px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.178);
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+    border: 1.5px solid white;    
+}
+
+
+.button:hover{
+    background-color: rgb(255, 255, 255);
+    cursor:pointer;    
+}
+
+
+.button:hover .enter-button{
+    color: rgb(49, 49, 49);
+    background-color: rgb(255, 255, 255);
+    cursor:pointer;
+}
+
+
+.enter-button{
+    z-index:1;
+    background: none;
+    border:0;
+    padding:0;
+    color: white;
+    font-size: 200%;
+    font-weight: 200;
+    outline-style: none;
+}
+
+
+@keyframes backgroundAnimation{
+  0%, 13%, 100%
+  {
+    opacity:1;
+  }
+  20%, 93%
+  {
+    opacity:0;
+  }
+}
+
+
+
+#background-div img{ 
+    min-height: 100%;
+    min-width: 1024px;
+    
+    width: 100%;
+    height: auto;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+   
+    animation-name: backgroundAnimation;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+
+}
+
+#background-div img:nth-of-type(1){
+  animation-delay: 20s;
+
+}
+
+#background-div img:nth-of-type(2){
+  animation-delay: 15s;
+
+}
+
+#background-div img:nth-of-type(3){
+  animation-delay: 10s;
+}
+
+#background-div img:nth-of-type(4){
+  animation-delay: 5s;
+
+}
+
+#background-div img:nth-of-type(5){
+  animation-delay: 0s;
+
+}
+
+
+
+
+@media(max-width:500px){
+  #title{
+    width:80vw;
+  }
+
+  .button{
+    transform: scale(0.8);
+  }
+
+  .enter-button{
+    transform:scale(0.8);
+  }
+}

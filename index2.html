@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8"/>
+        <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet"/>
+        <title>Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style2.css" type="text/css">
+  
+    </head>
+
+    <body>
+        
+        <img src="Images/Background_13.jpg" class="background">
+        
+        <div class="title-box">
+            <a  href="index.html">
+                <img src="Images/Logo_Ghibli.png" id="title">
+            </a>
+        </div>
+        
+        <div class="left-box">
+            <button class="menu-button" id="film-menu" type="button">Films</button>
+            <button class="menu-button" id="characters-menu" type="button">Characters</button>
+            <button class="menu-button" id="locations-menu" type="button">Locations</button>
+        </div>
+
+        <div class="open-menu">
+            <img src="Images/icon_menu.png" id="icon-menu" onclick="clickMenuDisplay()">
+        </div>
+        
+        <div class="section">
+            <div class="right-box">
+                <form>
+                    <select onchange="selectDisplayMovie() ; selectDisplayCharacter() ; selectDisplayLocation()" name="movies" id="select-movies">
+                        <option value="">Chose your film</option>
+                    </select>
+                </form>
+
+                <div class="grid"></div>
+            </div>
+        </div>
+        
+            <script src="main.js"></script>
+    </body>
+
+</html>
